@@ -4,10 +4,15 @@ import "./index.css";
 
 import ComponentDasar from "./components/componentDasar.jsx";
 import Variable from "./components/variable.jsx";
+import Props from "./components/props.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ComponentDasar />
     <Variable />
+    <Props
+      name="Muhammad Ramdani"
+      title={["tutorial JavaSciprt", "Tutorial CSS", "Tutorial HTML"]}
+    />
   </StrictMode>,
 );

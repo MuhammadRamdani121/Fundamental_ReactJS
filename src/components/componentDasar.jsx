@@ -5,7 +5,7 @@ export default function ComponentDasar() {
       <header className="text-center text-2xl font-bold">
         <h1>1.Dasar components </h1>
       </header>
-      <main className="flex justify-around items-center">
+      <main className="flex justify-around items-center -mt-15">
         <h1>Component Dasar Pertama</h1>
         <img src={img1} />
       </main>

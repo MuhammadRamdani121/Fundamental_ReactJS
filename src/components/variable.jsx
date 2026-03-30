@@ -15,7 +15,7 @@ export default function Variable() {
           <h1>{name}</h1>
           <h2>
             {title.map((title) => (
-              <div> {title}</div>
+              <div>-{title}</div>
             ))}
           </h2>
         </header>
