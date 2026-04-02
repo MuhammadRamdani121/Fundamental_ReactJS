@@ -13,7 +13,9 @@ export default function Search(props) {
       <div className="flex justify-center mt-10">
         Cari Artikel :
         <input className="border-2 " onChange={changeSearch}></input>
-        <small>Ditemukan 0 dengan data pencarian kata {search}</small>
+        <small>
+          Ditemukan {props.totalPosts} dengan data pencarian kata {search}
+        </small>
       </div>
     </>
   );
