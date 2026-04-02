@@ -1,25 +1,26 @@
 import { useState } from "react";
-import post from "../../post.json";
+import postsData from "../../post.json";
 import PostJson from "../postjson/postJson";
+import Search from "./search";
+
 export default function MainJson() {
   // Variabel changeSearch
+  const [post, setPosts] = useState([]);
 
-  const [search, setSearch] = useState("");
-
-  const changeSearch = (event) => {
-    setSearch(event.target.value);
+  const changeSearch = (value) => {
+    const filteredPosts = postsData.filter((item) =>
+      item.title.includes(value),
+    );
+    setPosts(filteredPosts);
   };
+
   return (
     <>
       <h1 className="mt-4 text-center text-2xl font-bold">4.Props Json</h1>
-      <div className="flex justify-center mt-10">
-        Cari Artikel :
-        <input className="border-2 " onChange={changeSearch}></input>
-        <small>Ditemukan 0 dengan data pencarian kata {search}</small>
-      </div>
-      {post.map(({ title, tags, date }, index) => (
+      <Search changeSearch={changeSearch} />
+      {post.map((props, index) => (
         // Spread Array
-        <PostJson {...{ title, tags, date }} key={index} />
+        <PostJson {...props} key={index} />
       ))}
     </>
   );
