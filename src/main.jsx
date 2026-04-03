@@ -6,6 +6,7 @@ import ComponentDasar from "./components/componentDasar.jsx";
 import Variable from "./components/variable.jsx";
 import Props from "./components/props.jsx";
 import MainJson from "./components/postjson/main.jsx";
+import Kondisi from "./components/coditional.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById("root")).render(
       title={["tutorial JavaSciprt", "Tutorial CSS", "Tutorial HTML"]}
     />
     <MainJson />
+    <Kondisi />
   </StrictMode>,
 );
